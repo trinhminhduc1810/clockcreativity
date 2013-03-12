@@ -1,4 +1,13 @@
 Clockandclock::Application.routes.draw do
+  resources :products
+
+
+  resources :sizes
+
+
+  resources :types
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

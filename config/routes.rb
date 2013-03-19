@@ -1,5 +1,4 @@
 Clockandclock::Application.routes.draw do
-  resources :products
 
 
   resources :sizes

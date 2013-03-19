@@ -1,7 +1,7 @@
 class Size < ActiveRecord::Base
-  #Attribute
-  attr_accessible :name, :size_id
+  #attribute
+  attr_accessible :length, :unit
 
-  #Relationship
+  #relationship
   has_many :products
 end

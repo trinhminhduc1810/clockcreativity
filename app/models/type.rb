@@ -1,7 +1,7 @@
 class Type < ActiveRecord::Base
-  #Attribute
-  attr_accessible :name, :type_id
+  #attribute
+  attr_accessible :name
 
-  #Relationship
+  #relationship
   has_many :products
 end

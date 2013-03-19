@@ -1,8 +1,11 @@
 class Product < ActiveRecord::Base
-  #Attribute
-  attr_accessible :code, :description, :material, :name, :price, :size_id, :type_id
+  #attribute
+  attr_accessible :size_id, :type_id
 
-  #Relationship
-  belongs_to :size
+  #relationship
   belongs_to :type
+  belongs_to :size
+
+  has_many :informations
+  has_many :images
 end

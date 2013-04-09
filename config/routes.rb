@@ -1,8 +1,9 @@
 Clockandclock::Application.routes.draw do
 
 
-  resources :sizes
+  devise_for :users
 
+  resources :sizes
 
   resources :types
 

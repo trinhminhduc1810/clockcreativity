@@ -1,12 +1,13 @@
 Clockandclock::Application.routes.draw do
 
-
+  #Devise Routing
   devise_for :users
 
-  resources :sizes
-
-  resources :types
-
+  #Admin Routing
+  scope "/admin" do
+    resources :sizes
+    resources :types
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

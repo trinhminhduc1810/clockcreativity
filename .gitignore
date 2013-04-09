@@ -15,3 +15,5 @@
 /tmp
 /.idea/workspace.xml
 /.idea/misc.xml
+/.idea/*
+/config/database.yml

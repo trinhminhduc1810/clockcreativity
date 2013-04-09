@@ -5,7 +5,7 @@ class TypesController < ApplicationController
     @types = Type.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.haml
       format.json { render json: @types }
     end
   end
@@ -16,7 +16,7 @@ class TypesController < ApplicationController
     @type = Type.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html # show.html.haml
       format.json { render json: @type }
     end
   end
@@ -27,7 +27,7 @@ class TypesController < ApplicationController
     @type = Type.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.json { render json: @type }
     end
   end

@@ -1,0 +1,26 @@
+%h1
+  = current_user ? current_user.email.to_s : "nothing"
+%h1 Listing sizes
+
+%table
+  %tr
+    %th Length
+    %th Unit
+    %th
+    %th
+    %th
+
+  - @sizes.each do |size|
+    %tr
+      %td= size.length
+      %td= size.unit
+      %td= link_to 'Show', size
+      %td= link_to 'Edit', edit_size_path(size)
+      %td= link_to 'Destroy', size, method: :delete, data: { confirm: 'Are you sure?' }
+
+= link_to 'New Size', new_size_path
+%br/
+= link_to 'Change Password', edit_user_password_path(current_user)
+|
+= link_to 'Sign Out', destroy_user_session_path(current_user), method: :delete
+

@@ -9,6 +9,7 @@ gem 'pg'
 gem 'thin'
 gem 'hirb'
 gem 'devise'
+gem 'haml-rails'
 
 
 # Gems used only for assets and not required

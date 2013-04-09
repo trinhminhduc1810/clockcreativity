@@ -1,44 +1,34 @@
 class SizesController < ApplicationController
-  # GET /sizes
-  # GET /sizes.json
+
   def index
     @sizes = Size.all
-
     respond_to do |format|
-      format.html # index.html.erb
+      format.html #index.html.haml
       format.json { render json: @sizes }
     end
   end
 
-  # GET /sizes/1
-  # GET /sizes/1.json
   def show
     @size = Size.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html # show.html.haml
       format.json { render json: @size }
     end
   end
 
-  # GET /sizes/new
-  # GET /sizes/new.json
   def new
     @size = Size.new
-
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.json { render json: @size }
     end
   end
 
-  # GET /sizes/1/edit
   def edit
     @size = Size.find(params[:id])
   end
 
-  # POST /sizes
-  # POST /sizes.json
   def create
     @size = Size.new(params[:size])
 
@@ -53,8 +43,6 @@ class SizesController < ApplicationController
     end
   end
 
-  # PUT /sizes/1
-  # PUT /sizes/1.json
   def update
     @size = Size.find(params[:id])
 
@@ -69,8 +57,6 @@ class SizesController < ApplicationController
     end
   end
 
-  # DELETE /sizes/1
-  # DELETE /sizes/1.json
   def destroy
     @size = Size.find(params[:id])
     @size.destroy
